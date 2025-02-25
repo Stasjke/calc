@@ -19,16 +19,15 @@ function Calculator() {
 
 			if (parts.length === 0) return '';
 
-			let result = Number(parts[0]);
+			let result = Number(parts[0]); // берем 0 индекс за начало сбора и первого из значений operation
 
 			for (let i = 1; i < parts.length; i += 2) {
 				const operator = parts[i];
-				let number = Number(parts[i + 1]);
+				let number = Number(parts[i + 1]); // начало второго значения выражения будет с i + 1
 
 				if (isNaN(number)) {
 					return 'Error';
 				}
-
 				if (operator === '+') {
 					result += number;
 				} else if (operator === '-') {
