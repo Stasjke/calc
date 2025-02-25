@@ -40,7 +40,7 @@
 }
 
 .Button[data-value="null"] {
-    pointer-events: none;
+    pointer-events: none !important;
 }
 
 .Button:hover {

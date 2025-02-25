@@ -1,20 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from '../App.module.css';
 
-class Button extends Component {
-	render() {
-		// const { label, value, onClick } = this.props;
+function Button({ label, value, onClick }) {
+	const buttonStyle = value === null ? { pointerEvents: 'none' } : {};
 
-		return (
-			<button
-				className={styles.Button}
-				onClick={this.props.onClick}
-				data-value={this.props.value}
-			>
-				{this.props.label}
-			</button>
-		);
-	}
+	return (
+		<button
+			className={styles.Button}
+			onClick={onClick}
+			data-value={value}
+			style={buttonStyle}
+		>
+			{label}
+		</button>
+	);
 }
 
 export default Button;
